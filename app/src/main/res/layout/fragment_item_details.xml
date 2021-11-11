@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ItemDetails">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#6F00FF"
+        android:text="title"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/todo_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter a list to do"
+        android:inputType="textPersonName"
+        android:textColor="#6F00FF" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="write your description"
+        android:inputType="textPersonName"
+        android:textColor="#6F00FF" />
+
+    <Button
+        android:id="@+id/list_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#7A59FF"
+        android:text="list date" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:backgroundTint="#7A59FF"
+        android:layout_height="wrap_content"
+        android:text="Addlist" />
+
+    <Button
+        android:id="@+id/delete_but"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#7A59FF"
+        android:text="delete" />
+
+    <CheckBox
+        android:id="@+id/list_complet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#7A59FF"
+        android:textColor="#6F00FF"
+        android:text="CheckBox" />
+
+</LinearLayout>
