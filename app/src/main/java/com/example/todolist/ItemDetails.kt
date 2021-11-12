@@ -4,6 +4,7 @@ import DatePicerDailogFragment
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,8 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import androidx.lifecycle.ViewModelProvider
+import com.afollestad.materialdialogs.MaterialDialog
+import com.example.awesomedialog.*
 import com.example.todolist.database.ToDoList
 import java.util.*
 
@@ -68,15 +71,26 @@ class ItemDetails : Fragment(),DatePicerDailogFragment.DatePickerCallBack {
 
             }
         button3.setOnClickListener{
-            fragmentViewModel.delete(todolist)
-            val fragment=FragmentToDoList()
-            activity?.let {
-                it.supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.fragmentContainer,fragment)
-                    .addToBackStack(null)
-                    .commit()
-            }
+
+
+            val dialog = MaterialDialog(this?.requireContext())
+                .title(R.string.title_dialog_del)
+                .positiveButton ( R.string.agreedelete ){
+                    fragmentViewModel.delete(todolist)
+                    val fragment=FragmentToDoList()
+                    activity?.let {
+                        it.supportFragmentManager
+                            .beginTransaction()
+                            .replace(R.id.fragmentContainer,fragment)
+                            .addToBackStack(null)
+                            .commit()
+                    }
+                }
+                .negativeButton { R.string.disagreedelete }
+            dialog.message(R.string.body_dialog_del)
+
+
+            dialog.show()
 
         }
 

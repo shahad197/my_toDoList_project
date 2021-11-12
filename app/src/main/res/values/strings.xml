@@ -2,4 +2,8 @@
     <string name="app_name">ToDoList</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_dialog_del">Confirm Deletet</string>
+    <string name="body_dialog_del">"Are You Sure To Delete The Item ?</string>
+    <string name="agreedelete">"Confirm ?</string>
+    <string name="disagreedelete">"Confirm ?</string>
 </resources>

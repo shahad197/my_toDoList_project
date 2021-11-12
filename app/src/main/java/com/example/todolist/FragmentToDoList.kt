@@ -73,6 +73,7 @@ class FragmentToDoList :Fragment() {
                 super.onViewCreated(view, savedInstanceState)
 
                 toDoViewModel.lifeDataToDo?.observe(
+
                         viewLifecycleOwner, Observer {
                                 updateUI(it)
 

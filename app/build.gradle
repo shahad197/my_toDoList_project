@@ -22,6 +22,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+       
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -29,7 +32,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
+
+
+
 
 dependencies {
 
@@ -41,8 +48,10 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
+    implementation 'com.github.chnouman:AwesomeDialog:1.0.5'
     implementation "androidx.room:room-runtime:2.4.0-beta01"
     kapt "androidx.room:room-compiler:2.4.0-beta01"
     implementation "androidx.room:room-ktx:2.4.0-beta01"
+    implementation 'com.afollestad.material-dialogs:core:3.2.1'
+
 }
