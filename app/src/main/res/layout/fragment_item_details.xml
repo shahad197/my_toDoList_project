@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,55 +12,107 @@
         android:id="@+id/title_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#6F00FF"
-        android:text="title"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Control Task"
+        android:textColor="#3894AA"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/todo_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/title_text"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_et"
         android:ems="10"
         android:hint="Enter a list to do"
         android:inputType="textPersonName"
+        android:padding="8dp"
         android:textColor="#6F00FF" />
 
     <EditText
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/todo_list"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_et"
         android:ems="10"
         android:hint="write your description"
         android:inputType="textPersonName"
+        android:padding="8dp"
         android:textColor="#6F00FF" />
-
-    <Button
-        android:id="@+id/list_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#7A59FF"
-        android:text="list date" />
-
-    <Button
-        android:id="@+id/add"
-        android:layout_width="match_parent"
-        android:backgroundTint="#7A59FF"
-        android:layout_height="wrap_content"
-        android:text="Addlist" />
-
-    <Button
-        android:id="@+id/delete_but"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#7A59FF"
-        android:text="delete" />
 
     <CheckBox
         android:id="@+id/list_complet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#7A59FF"
-        android:textColor="#6F00FF"
-        android:text="CheckBox" />
+        android:layout_below="@id/description"
+        android:layout_marginLeft="8dp"
+        android:backgroundTint="#673AB7"
+        android:text="IsDone"
+        android:textColor="#319DAC" />
 
-</LinearLayout>
+
+    <Button
+        android:id="@+id/list_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_complet"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#2196F3"
+        android:drawableLeft="@drawable/ic_baseline_date_range_24"
+        android:padding="8dp"
+        android:text="Choose Date Due" />
+
+
+    <LinearLayout
+        android:layout_below="@id/list_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2196F3"
+            android:drawableLeft="@drawable/ic_baseline_add_circle_24"
+            android:text="Add To List"
+            android:textAllCaps="false"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/delete_but"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2196F3"
+            android:drawableLeft="@drawable/ic_baseline_delete_24"
+            android:text="Delete From List"
+            android:textAllCaps="false"
+            android:textSize="10sp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

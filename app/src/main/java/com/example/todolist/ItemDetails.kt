@@ -184,7 +184,7 @@ class ItemDetails : Fragment(),DatePicerDailogFragment.DatePickerCallBack {
     }
 
       override  fun onDateSelected (date:Date){
-
+Log.e("SelectDate :", date.toString())
             todolist.date = date
             button.text = date.toString()
         }

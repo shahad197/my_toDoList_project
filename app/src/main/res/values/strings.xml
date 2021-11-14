@@ -5,5 +5,5 @@
     <string name="title_dialog_del">Confirm Deletet</string>
     <string name="body_dialog_del">"Are You Sure To Delete The Item ?</string>
     <string name="agreedelete">"Confirm ?</string>
-    <string name="disagreedelete">"Confirm ?</string>
+    <string name="disagreedelete">"exit</string>
 </resources>
